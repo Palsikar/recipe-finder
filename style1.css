@@ -1,3 +1,4 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,50 +7,76 @@
 }
 
 body {
-    background-color: #f8c8dc;
+    background-color: #f8f1f1;
     color: #5a3d2b;
     text-align: center;
 }
 
 /* Navigation Bar */
 header nav {
-    background-color: #f5deb3;
+    background-color: #ffcc5c;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 header nav h1 {
+    color: #4a2f21;
+    font-size: 28px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?food,cooking') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-header nav form {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+.hero p {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
-form input[type="text"] {
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+form input {
     padding: 10px;
-    width: 250px;
-    margin-right: 10px;
-    border: 2px solid brown;
+    width: 300px;
     border-radius: 5px;
+    border: 2px solid #fff;
 }
 
 form button {
     border: none;
-    background-color: green;
+    background-color: #ff6f61;
     color: white;
-    font-size: 18px;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 10px;
 }
 
 form button:hover {
-    background-color: red;
+    background-color: #d9534f;
 }
 
 /* Recipe Container */
@@ -57,8 +84,7 @@ form button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    width: 80%;
-    margin: 20px auto;
+    padding: 20px;
 }
 
 .recipe {
@@ -66,9 +92,8 @@ form button:hover {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
     transition: 0.3s;
-    text-align: left;
+    text-align: center;
 }
 
 .recipe:hover {
@@ -85,23 +110,21 @@ form button:hover {
 }
 
 .recipe p {
-    margin: 5px 0;
     font-size: 14px;
     color: #555;
 }
 
 .recipe button {
     padding: 8px;
-    background-color: brown;
+    background-color: #ff6f61;
     color: white;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
     border-radius: 5px;
 }
 
 .recipe button:hover {
-    background-color: darkred;
+    background-color: #d9534f;
 }
 
 /* Recipe Details Popup */
@@ -114,7 +137,7 @@ form button:hover {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
     max-height: 80vh;
     overflow-y: auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -127,12 +150,11 @@ form button:hover {
 }
 
 .recipe-details h2 {
-    color: brown;
+    color: #ff6f61;
 }
 
 .recipe-details ul {
     list-style: none;
-    text-align: left;
     padding-left: 15px;
 }
 
@@ -140,26 +162,26 @@ form button:hover {
     margin-bottom: 8px;
 }
 
-.recipe-close-btn {
-    background-color: red;
+.recipe-close-btn,
+.back-btn {
+    background-color: #d9534f;
     color: white;
     border: none;
     padding: 10px;
-    margin-top: 15px;
     cursor: pointer;
     border-radius: 5px;
-    display: block;
     width: 100%;
+    margin-top: 15px;
 }
 
-.recipe-close-btn:hover {
-    background-color: darkred;
+.recipe-close-btn:hover,
+.back-btn:hover {
+    background-color: #b52b27;
 }
 
 /* Responsive Design */
 @media (max-width: 600px) {
     .recipe-details {
         width: 90%;
-        height: auto;
     }
 }
